@@ -1,0 +1,22 @@
+﻿@page "/"
+@inherits IndexBase
+
+<h1>Plan lar ro'yxati</h1>
+
+Assalomu aleykum, hush kelibsiz!
+@if (Plans is not null)
+{
+    @foreach (var plan in Plans)
+    {
+        <Plan Id="@plan.Id" Title="@plan.Title" DateTime="@plan.DateTime" Description="@plan.Description"/>
+    }
+}
+else
+{
+    <h4>Loading...</h4>
+}
+
+<div class="float-right">
+    <a href="/plan" class="btn btn-primary" >Plan</a>
+</div>
+

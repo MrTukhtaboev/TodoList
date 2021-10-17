@@ -1,0 +1,16 @@
+﻿@page "/plan"
+@inherits PlanBase
+
+<div class="alert alert-secondary mt-4" role="alert">
+    <span class="oi oi-pencil mr-2" aria-hidden="true"></span>
+    <strong>@Title</strong>
+
+    <span class="text-nowrap">
+        @DateTime
+    </span>
+
+    <div class="btn-group float-right">
+        <a href="/editplan" class="oi oi-pencil mr-3"></a>
+        <a href="/" class="oi oi-trash" @onclick="DeletePlan_OnClick"></a>
+    </div>
+</div>
